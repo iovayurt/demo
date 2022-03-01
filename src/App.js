@@ -22,7 +22,14 @@ export default function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto"></Nav>
               <Nav.Link>Transactions</Nav.Link>
-              <Nav.Link>Login</Nav.Link>
+              <Nav.Link
+                onClick={window.walletConnection.isSignedIn() ? logout : login}
+              >
+                {window.walletConnection.isSignedIn()
+                  ? window.accountId
+                  : "Login"
+                }
+                </Nav.Link>
 
           </Navbar.Collapse>
         </Container>
