@@ -56,6 +56,7 @@ export default function App() {
                 <Button variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
+
           </Container>
         </Navbar>
     </Router>
